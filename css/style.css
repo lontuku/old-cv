@@ -15,7 +15,7 @@
 
 body {
   background-color: white;
-  font-family: 'Arimo';
+  font-family: 'Lato';
 }
 
 html {
@@ -237,17 +237,170 @@ navbar {
   background: var(--clr-grey);
 }
 
-.container article {
+.gallery-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   overflow: hidden;
 }
 
-article > img {
-  width: 30%;
+.gallery-container > img {
+  width: 40%;
   object-fit: cover;
   margin-bottom: 20px;
   display: block;
-  
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* ultima seccion */
+
+.last-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+
+.last-section img {
+  width: 48%;
+}
+
+.last-section .container-text-main {
+  width: 40%;
+}
+
+footer {
+  background: var(--clr-blue);
+  margin-top: -50px;
+  color: white;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.input {
+  background: transparent;
+  border: 0;
+  color: white;
+  outline: none;
+  border: 1px solid white;
+  padding: 20px 10px;
+}
+
+.input::placeholder {
+  color: white;
+  font-family: Lato;
+}
+
+input[type="text"],
+input[type="email"] {
+  display: inline-block;
+  width: 48%;
+  margin-bottom: 30px;
+}
+
+.form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+input[type="submit"] {
+  width: 120px;
+  text-align: center;
+  padding: 14px 0;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  color: var(--clr-blue);
+  background: white;
+}
+
+@media screen and (max-width: 800px) {
+  /* general */
+  .text-intro h1 {
+    text-align: center;
+    font-size: 50px;
+  }
+
+  .title {
+    font-size: 35px;
+  }
+
+  .title.left {
+    text-align: center;
+  }
+
+  .info p {
+    text-align: center;
+  }
+
+  .container {
+    max-width: 90%;
+  }
+
+  /* section 1 */
+  .svg-hero {
+    margin-bottom: -10px;
+    z-index: 9999;
+  }
+
+  .web {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .web img{
+    width: 100%;
+  }
+
+  .web .container-text-main {
+    width: 100%;
+  }
+
+  /* cards */
+  .cards {
+    max-width: 90%;
+  }
+  .card {
+    width: 95%;
+    margin-bottom: 10px;
+  }
+
+  /* gallery */
+  .gallery-container > img {
+    width: 48%;
+  }
+
+  /* last */
+  .last-section img {
+    width: 98%;
+  }
+
+  .last-section .container-text-main {
+    width: 98%;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .title,
+  .text-intro h1{
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .web .container-text-main{
+    margin-bottom: 30px;
+  }
+
+  .gallery-container > img {
+    width: 97%;
+  }
 }

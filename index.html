@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="assets/images/favicon.png">
   <link href="https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <title>Document</title>
 </head>
@@ -86,7 +87,7 @@
       <section class="gallery">
         <div class="container">
           <h2 class="title">FOTOS</h2>
-          <article>
+          <article class="gallery-container">
             <img src="https://placekitten.com/g/300/200" alt="">
             <img src="https://placekitten.com/g/300/200" alt="">
             <img src="https://placekitten.com/g/300/200" alt="">
@@ -98,22 +99,30 @@
         </div>
       </section>
 
-      <section class="info last">
+      <section class="info-last">
         <div class="container last-section">
-          <h2 class="title-left">Titulo de la seccion</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ratione ex optio quos commodi nisi eum quis explicabo similique at fugiat corrupti velit odio facilis, tempore, est nihil, officia voluptatum.</p>
-          <a href="#" class="cta">MAS</a>
-          <img src="https://placekitten.com/800/300" alt="">
+          <div class="container-text-main">
+            <h2 class="title-left">Titulo de la seccion</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ratione ex optio quos commodi nisi eum quis explicabo similique at fugiat corrupti velit odio facilis, tempore, est nihil, officia voluptatum.</p>
+            <a href="#" class="cta">MAS</a>
+          </div>
+          <img src="https://placekitten.com/600/300" alt="">
+        </div>
+
+        <div class="svg-wave">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4670b4" fill-opacity="1" d="M0,32L48,48C96,64,192,96,288,133.3C384,171,480,213,576,234.7C672,256,768,256,864,213.3C960,171,1056,85,1152,42.7C1248,0,1344,0,1392,0L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
         </div>
       </section>
 
       <footer id="contact">
         <div class="container">
           <h2 class="title">Contacto</h2>
-          <input class="input" type="text" name='' id= '' placeholder="Nombre">
-          <input class="input" type="email" name='' id= '' placeholder="Email">
-          <textarea class="input" name='' id='' cols='30' rows='10' placeholder="Mensaje"></textarea>
-          <input class="input" type="submit" value="enviar">
+          <form action="" class="form">
+            <input class="input" type="text" name='' id= '' placeholder="Nombre">
+            <input class="input" type="email" name='' id= '' placeholder="Email">
+            <textarea class="input" name='' id='' cols='30' rows='10' placeholder="Mensaje"></textarea>
+            <input class="input" type="submit" value="Enviar">
+          </form>
         </div>
       </footer>
     </div>
