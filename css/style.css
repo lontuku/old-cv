@@ -272,6 +272,34 @@ html {
   overflow: hidden;
 }
 
+/* columns */
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 2fr;
+}
+
+.columns .data {
+  width: 100%;
+  margin: 20px 10px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.columns .pic {
+  width: 100%;
+}
+
+.columns .pic img {
+  width: 100%;
+}
+
+/* sombra imagenes */
+.shadow-pic {
+  box-shadow: 10px 10px 0px 0px var(--clr-blue);
+}
+
 /* mapa */
 
 .map {
