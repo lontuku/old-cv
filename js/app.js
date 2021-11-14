@@ -1,7 +1,17 @@
 window.addEventListener('scroll', function(){
-  let navbar = document.querySelector('navbar');
+  let navbar = document.querySelector('nav');
   navbar.classList.toggle('sticky', window.scrollY > 0);
 })
+
+$('.nav-burger').click(function() {
+  $('.nav-menu').toggleClass('closed');
+  $('.burger-button').toggleClass('change');
+});
+
+$('.nav-item').click(function() {
+  $('.nav-menu').toggleClass('closed');
+  $('.burger-button').toggleClass('change');
+});
 
 var direction_i = 0,
  $window = $(window);

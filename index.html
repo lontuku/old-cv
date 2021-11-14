@@ -12,25 +12,23 @@
   <title>Document</title>
 </head>
 <body>
-  <navbar>
-    <li class="nav-item">
-      <a href="#" class="navbar-logo"><img src="assets/images/logo-plano.png" alt="alternative"></a>
-    </li>
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a href="#">Firma</a>
-      </li>
-      <li class="nav-item">
-        <a href="#">Áreas</a>
-      </li>
-      <li class="nav-item">
-        <a href="#">Nosotros</a>
-      </li>
-      <li class="nav-item">
-        <a href="#contact">Contacto</a>
-      </li>
-    </ul>
-  </navbar>
+
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="#" class="nav-logo"><img src="assets/images/logo-plano.png" alt="alternative"></a>
+
+      <label for="" class="nav-burger">
+        <svg class="burger-button" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" style="transform: ;msFilter:;"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>
+      </label>
+      
+      <div class="nav-menu">
+        <a href="#" class="nav-item">Firma</a>
+        <a href="#" class="nav-item">Áreas</a>
+        <a href="#" class="nav-item">Nosotros</a>
+        <a href="#contact" class="nav-item">Contacto</a>
+      </div>
+    </div>
+  </nav>
 
   <header class='hero'>
     <div class="text-intro">
@@ -54,7 +52,7 @@
   </section>
 
   <section class="info">
-    <div class="container">
+    <div class="container two">
       <h2 class="title left">Sección 2</h2>
       <hr class='separator negative'>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi quia praesentium optio fugiat porro accusantium! Unde magnam nesciunt nostrum a corporis cumque explicabo eaque dolorem alias ducimus possimus hic eveniet illo dolor, suscipit perferendis esse. Sint, magni molestiae. Expedita quisquam assume</p>
@@ -84,7 +82,7 @@
         <a href="#" class="cta">MAS</a>
       </article>
     </section>
-      <section class="gallery">
+      <!-- <section class="gallery">
         <div class="container">
           <h2 class="title">FOTOS</h2>
           <article class="gallery-container">
@@ -97,6 +95,40 @@
 
           </article>
         </div>
+      </section> -->
+
+      <section class="container">
+        <div class="map">
+        <div class="container-text-map">
+          <div class="map-title">
+            <h2 class="title title-left">Oficina Principal</h2>
+            <hr class='separator'>
+          </div>
+          <div class="descriptor">
+            <img class="icon" src="assets/images/direction-icon.svg" alt="">
+            <div class="data">
+              <h2>Dirección</h2>
+              <p> Avenida Presidente Kennedy 3886, Vitacura </p>
+            </div>
+          </div>
+          <div class="descriptor">
+            <img src="assets/images/phone-icon.svg" alt="" class="icon">
+            <div class="data">
+              <h2>Telefono</h2>
+              <p> 999 888 77</p>
+            </div>
+          </div>
+          <div class="descriptor">
+            <img src="assets/images/envelope-icon.svg" alt="" class="icon">
+            <div class="data">
+              <h2>Email</h2>
+              <p>info@mcni.cl</p>
+            </div>
+          </div>
+        </div>
+          <iframe class="map-picture" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.690513539285!2d-70.59294914873372!3d-33.40523758069277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf3a6bd324db%3A0xe4ac278fe49aea1f!2sAv.%20Pdte.%20Kennedy%203886%2C%20Vitacura%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1sen!2scl!4v1636846624423!5m2!1sen!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
       </section>
 
       <section class="info-last">
