@@ -90,7 +90,7 @@ html {
 }
 
 .hero {
-  background-image: linear-gradient(to top, hsla(180, 63%, 50%, 0.589) 0%, hsla(267, 86%, 22%, 0.664) 100%), url(/assets/images/2.jpg);
+  background-image: linear-gradient(to top, hsla(180, 63%, 50%, 0.589) 0%, hsla(267, 86%, 22%, 0.664) 100%), url(/assets/images/oficina.jpg);
   width: 100%;
   height: 650px;
   background-repeat: no-repeat;
@@ -217,41 +217,6 @@ html {
   color: white;
 }
 
-.content-cards {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-
-.card {
-  width: 30%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  box-shadow: 0 0 3px 0 rgba(0 , 0, 0, 0.5);
-  transform: scale(1);
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  box-shadow: 0 0 6px rgba(0 , 0, 0, 0.5);
-  transform: scale(1.03);
-}
-
-.card i {
-  font-size: 60px;
-  color: var(--clr-blue);
-  margin: 30px auto 20px;
-}
-
-.card p {
-  font-weight: 300px;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
 .gallery{
   background: var(--clr-grey);
 }
@@ -275,8 +240,24 @@ html {
 /* new cards */
 .card-container {
   position: relative;
-  width: 250px;
-  height: 320px;
+  width: 90%;
+  min-height: 480px;
+  margin: 0 25px 30px;
+}
+
+.title-cards {
+  grid-column: 1 / 5;
+  align-self: center;
+  justify-self: center;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 20% 0;
+}
+
+.allcards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 10rem 1fr;
 }
 
 .thecard{
@@ -306,13 +287,13 @@ html {
 }
 
 .thefront i {
-  font-size: 60px;
+  font-size: 5rem;
   text-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
   color: lightgrey;
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -180%);
+  transform: translate(-50%, -100%);
   border-radius: 15px
 }
 
@@ -320,33 +301,19 @@ html {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-  to right,
-  hsl(0, 0%, 0%) 0%,
-  hsla(0, 0%, 0%, 0.964) 7.4%,
-  hsla(0, 0%, 0%, 0.918) 15.3%,
-  hsla(0, 0%, 0%, 0.862) 23.4%,
-  hsla(0, 0%, 0%, 0.799) 31.6%,
-  hsla(0, 0%, 0%, 0.73) 39.9%,
-  hsla(0, 0%, 0%, 0.655) 48.2%,
-  hsla(0, 0%, 0%, 0.577) 56.2%,
-  hsla(0, 0%, 0%, 0.497) 64%,
-  hsla(0, 0%, 0%, 0.417) 71.3%,
-  hsla(0, 0%, 0%, 0.337) 78.1%,
-  hsla(0, 0%, 0%, 0.259) 84.2%,
-  hsla(0, 0%, 0%, 0.186) 89.6%,
-  hsla(0, 0%, 0%, 0.117) 94.1%,
-  hsla(0, 0%, 0%, 0.054) 97.6%,
-  hsla(0, 0%, 0%, 0) 100%
-  );
+  background-image: linear-gradient(to top, rgba(70, 131, 180, 0), rgba(71, 61, 139, 0.555) 90%);
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 15px
+  border-radius: 15px;
+  padding-top: 40%;
+  
 }
 
 .container-text p {
   color: white;
+  font-size: 20px;
+  text-align: center;
 }
 
 .thefront img {
@@ -358,6 +325,10 @@ html {
   border-radius: 15px 15px;
 }
 
+.first-pic img {
+  object-position: -119px 0px;
+}
+
 .theback {
   position: absolute;
   left: 0;
@@ -365,37 +336,78 @@ html {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  background: #813939;
-  color: #333;
+  background: var(--clr-blue);
+  color: rgb(255, 255, 255);
   transform: rotateY(180deg);
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 15px 15px
+}
+
+.theback p {
+  text-align: justify;
+  margin: 0 20% 0;
+}
+
+.theback i {
+  position: absolute;
+  font-size: 5rem;
+  top: 13%;
+}
+
+.third p {
+  margin: 50% 20% 0 20%;
+}
+
+.second p {
+  margin: 20% 20% 0 20%;
+}
+
+.first p {
+  margin: 20% 20% 0 20%;
 }
 
 /* columns */
 
-.columns {
+.bleed {
+  /* width: 100%;
+  max-width: 100%;
+  min-height: 500px; */
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 2fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  height: 70vh;
+  margin: 50px 0 10px;
 }
 
-.columns .data {
+.bleed .data {
   padding: 20px 20px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: hsl(0deg 0% 97%);
+  font-size: 1.2rem;
 }
 
-.columns .pic img {
+.bleed .pic {
+  background-size: cover;
   width: 100%;
-  display: block;
+  height: 100%;
+}
+
+.bleed .stretchone {
+  background: url(/assets/images/edificio.jpg);
+}
+
+.bleed .stretchtwo {
+  background: url(/assets/images/graphguy.jpg);
 }
 
 /* sombra imagenes */
 .shadow-pic {
   box-shadow: 10px 10px 0px 0px var(--clr-blue);
+  object-fit: cover;
 }
 
 /* mapa */
