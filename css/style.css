@@ -445,11 +445,20 @@ html {
 .descriptor .data {
   display: flex;
   flex-direction: column;
-  align-items: space-between;
 }
 
-.data p{
-  margin-bottom: 5px;
+.data a{
+  /* text-decoration: none; */
+  color: grey;
+  font-size: 1.1em;
+}
+
+.data a:visited {
+  color: grey;
+}
+
+.data a:hover {
+  color: black;
 }
 
 .descriptor .icon {
@@ -460,6 +469,7 @@ html {
 
 .descriptor h2{
   font-size: 20px;
+  margin-bottom: 2px;
 }
 
 .descriptor p {
@@ -556,7 +566,7 @@ footer {
   margin-bottom: 20px;
 }
 
-.input {
+.input, .send {
   background-color: var(--clr-blue);
   border: 0;
   color: white;
@@ -582,7 +592,7 @@ input[type="email"] {
   margin-bottom: 15px;
 }
 
-input[type="submit"] {
+.send {
   width: 120px;
   text-align: center;
   padding: 14px 0;
@@ -849,6 +859,11 @@ input:-webkit-autofill:focus {
     margin-bottom: 10px;
   }
 
+  .theback i {
+    position: static;
+    height: auto;
+  }
+
   /* gallery */
   .gallery-container > img {
     width: 48%;
@@ -920,15 +935,14 @@ input:-webkit-autofill:focus {
     align-items: center;
   }
 
-  .theback p {
-    margin: 20% 10% 10px 10%;
-    max-height: 30%;
-    font-size: .9rem;
-  }
-
   .theback {
     transform: none;
     flex-direction: column;
+    justify-content: center;
+  }
+
+  .theback p {
+    margin: 20px 10% 20px;
   }
 
   .theback h2{
@@ -951,14 +965,8 @@ input:-webkit-autofill:focus {
     grid-row: 4/5;
   }
 
-  .third {
-    justify-content: space-evenly;
-  }
-
   .third p{
-    height: 100%;
-    margin-top: 30%;
-    margin-bottom: 5px;
+    margin: 10px 10% 10px;
   }
 
   .regulatorio {
@@ -969,7 +977,7 @@ input:-webkit-autofill:focus {
   .card-container {
     position: relative;
     width: 80%;
-    min-height: 300px;
+    min-height: 380px;
   }
 
   .map {
