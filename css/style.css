@@ -557,7 +557,7 @@ footer {
 }
 
 .input {
-  background: transparent;
+  background-color: var(--clr-blue);
   border: 0;
   color: white;
   outline: none;
@@ -588,7 +588,16 @@ input[type="submit"] {
   padding: 14px 0;
 }
 
-input[type="submit"]:hover {
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px var(--clr-blue) inset;
+  transition: background-color 5000s ease-in-out 0s;
+  caret-color: white;
+}
+
+.submitBtn:hover {
   cursor: pointer;
   color: var(--clr-blue);
   background: white;

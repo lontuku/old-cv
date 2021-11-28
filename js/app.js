@@ -91,6 +91,9 @@ $(document).on('click', function(event) {
 
 $('#theform').submit(function(event) {
   event.preventDefault();
+  $('.send').attr('value', 'Enviando...');
+  $('.send').removeClass('submitBtn');
+  $('.send').prop('disabled', true);
   var form = $(this);
     $.ajax({
       type: form.attr('method'),
@@ -102,6 +105,7 @@ $('#theform').submit(function(event) {
         'display': 'grid',
         'place-items': 'center',
       });
+      $('#theform').trigger("reset");
     }).fail(function(data) {
       fail.css({
         'opacity': '1',
@@ -109,5 +113,27 @@ $('#theform').submit(function(event) {
         'place-items': 'center',
       });
     });
+    $('.send').attr('value', 'Enviar');
+    $('.send').addClass('submitBtn');
+    $('.send').prop('disabled', false);
 });
 
+// $('body').on('submit', form, function formSubmitHandler(event){
+//   // Shadow the form to prevent infinite loop
+//   var form = event.target;
+
+//   event.preventDefault();
+
+//   // If <input type="submit">
+//   button.attr('value', 'Adding...');
+
+//   // If <button>Add</button>
+//   button.text('Adding...');
+
+//   button.prop('disabled', true);
+
+//   // Submit the form in a different tick
+//   setTimeout(function() {
+//       form.submit();
+//   }, 10);
+// });
