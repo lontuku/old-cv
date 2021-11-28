@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-  <title>Document</title>
+  <title>MCNI Abogados</title>
 </head>
 <body>
 
@@ -22,9 +22,9 @@
       </label>
       
       <div class="nav-menu">
-        <a href="#" class="nav-item">Firma</a>
-        <a href="#" class="nav-item">Áreas</a>
-        <a href="#" class="nav-item">Nosotros</a>
+        <a href="#firma" class="nav-item">Firma</a>
+        <a href="#areas" class="nav-item">Áreas</a>
+        <a href="#nosotros" class="nav-item">Nosotros</a>
         <a href="#contact" class="nav-item">Contacto</a>
       </div>
     </div>
@@ -33,15 +33,15 @@
   <header class='hero'>
     <div class="text-intro">
       <h1>MCNI ABOGADOS</h1>
-      <p>Besto Sitio</p>
+      <p></p>
       <a href="#contact">Contáctanos</a>
     </div>
-    <div class="svg-hero">
+    <div class="svg-hero" id="firma">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffff" fill-opacity="1" d="M0,32L48,48C96,64,192,96,288,133.3C384,171,480,213,576,234.7C672,256,768,256,864,213.3C960,171,1056,85,1152,42.7C1248,0,1344,0,1392,0L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
     </div>
   </header>
 
-  <section class="wave-container web">
+  <section class="wave-container web" >
     <img src="assets/images/estudio.jpg" class="shadow-pic" alt="">
     <div class="container-text-main">
       <h2 class="title left">Nuestro Estudio</h2>
@@ -50,7 +50,7 @@
         Fundado sobre la excelencia como principio rector, en MCNI Abogados buscamos brindar asesoría en una modalidad probada por sus exitosos resultados, destacándonos por un servicio permanente, especializado y eficiente a la hora de encontrar soluciones rápidas y efectivas a conflictos legales y comerciales. 
 Buscamos brindar un servicio jurídico justo en todas sus dimensiones, a la medida del cliente y enfocado a sus necesidades.
       </p>
-      <a href="#" class="cta">Leer mas</a>
+      <!-- <a href="#" class="cta">Leer mas</a> -->
     </div>
   </section>
 
@@ -62,11 +62,11 @@ Buscamos brindar un servicio jurídico justo en todas sus dimensiones, a la medi
     </div>
   </section>
 
-  <section class="allcards">
+  <section class="allcards" id="areas">
     <p class="title-cards">
       Trabajamos tanto para empresas como para personas ofreciendo nuestros servicios.
     </p>
-    <div class="card-container">
+    <div class="card-container civil">
       <div class="thecard">
         <div class="thefront first-pic">
           <img src="assets/images/civil.jpg" alt="">
@@ -80,10 +80,11 @@ Buscamos brindar un servicio jurídico justo en todas sus dimensiones, a la medi
           <p>
             Asesorías a personas naturales en materias de herencias, redacción de contratos civiles, arrendamientos, redacción y revisión de diversos contratos. 
           </p>
+          <h2>Derecho civil</h2>
         </div>
       </div>
     </div>
-    <div class="card-container">
+    <div class="card-container laboral">
       <div class="thecard">
         <div class="thefront">
           <img src="assets/images/laboral.jpg" alt="">
@@ -96,10 +97,11 @@ Buscamos brindar un servicio jurídico justo en todas sus dimensiones, a la medi
           <i class="fas fa-briefcase"></i>
           <p>Asesoría a empresas y personas sobre temas laborales como contratación, despidos, indemnizaciones, derechos del trabajador, entre otros.
           </p>
+          <h2>Derecho Laboral</h2>
         </div>
       </div>
     </div>
-    <div class="card-container">
+    <div class="card-container comercial-card">
       <div class="thecard">
         <div class="thefront">
           <img src="assets/images/comercial.jpg" alt="">
@@ -112,10 +114,11 @@ Buscamos brindar un servicio jurídico justo en todas sus dimensiones, a la medi
           <i class="fas fa-file-invoice-dollar"></i>
           <p>Asesoría legal y financiera para micros, pequeñas, medianas y grandes empresas. Contratos, reclamo de impagos, asesoría en contrataciones, quiebras o liquidaciones, reestructuraciones y reorganización, de empresas y personas.
           </p>
+          <h2>Derecho Comercial</h2>
         </div>
       </div>
     </div>
-    <div class="card-container">
+    <div class="card-container regulatorio">
       <div class="thecard">
         <div class="thefront">
           <img src="assets/images/maletin.jpg" alt="">
@@ -127,12 +130,13 @@ Buscamos brindar un servicio jurídico justo en todas sus dimensiones, a la medi
         <div class="theback">
           <i class="fas fa-pencil-ruler"></i>
           <p>Asesoría a personas, sean comerciantes o no, y empresas frente a los actos de los órganos de la administración del Estado. </p>
+          <h2>Derecho Regulatorio</h2>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="bleed">
+  <section class="bleed" id="nosotros">
       <div class="pic stretchone">
       </div>
       <div class="data">
@@ -179,7 +183,7 @@ Buscamos brindar un servicio jurídico justo en todas sus dimensiones, a la medi
       </div>
       </section>
 
-      <section class="info-last">
+      <!-- <section class="info-last">
         <div class="container last-section">
           <div class="container-text-main">
             <h2 class="title-left">Titulo de la seccion</h2>
@@ -192,7 +196,7 @@ Buscamos brindar un servicio jurídico justo en todas sus dimensiones, a la medi
         <div class="svg-wave">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4670b4" fill-opacity="1" d="M0,32L48,48C96,64,192,96,288,133.3C384,171,480,213,576,234.7C672,256,768,256,864,213.3C960,171,1056,85,1152,42.7C1248,0,1344,0,1392,0L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
         </div>
-      </section>
+      </section> -->
 
       <footer id="contact">
         <div class="container container-formulario">
@@ -207,15 +211,41 @@ Buscamos brindar un servicio jurídico justo en todas sus dimensiones, a la medi
           </div>
           <div class="formulario">
           <h2 class="title">Contacto</h2>
-          <form action="" class="form">
-            <input class="input" type="text" name='' id= '' placeholder="Nombre (obligatorio)" required>
-            <input class="input" type="email" name='' id= '' placeholder="Email (obligatorio)" required>
-            <textarea class="input" name='' id='' cols='30' rows='10' placeholder="Mensaje"></textarea>
-            <input class="input" type="submit" value="Enviar">
+          <form action="https://api.staticforms.xyz/submit" class="form" id="theform" method="post">
+            <input type="hidden" name="accessKey" value="0241b496-ef42-408d-afa5-11e7847c2d5d">
+            <input class="input" type="text" name='$Nombre'  placeholder="Nombre (obligatorio)" required>
+            <input class="input" type="email" name='$Correo' placeholder="Email (obligatorio)" required>
+            <textarea class="input" name='$Mensaje' cols='30' rows='10' placeholder="Mensaje" required></textarea>
+            <input class="input send" type="submit" value="Enviar">
           </form>
           </div>
         </div>
       </footer>
+
+      <div class="modal" id="good">
+        <div class="modal-content" id="good-content">
+          <div class="close-btn">&times;</div>
+          <div class="check"><i class="far fa-check-circle"></i></div>
+          <div class="modal-message">
+            <h2>Mensaje Enviado</h2>
+            <p>Nos contactaremos
+              a la brevedad contigo.
+            </p>
+          </div>
+        </div>  
+      </div>
+
+      <div class="modal" id="fail">
+        <div class="modal-content" id="fail-content">
+          <div class="close-btn">&times;</div>
+          <div class="check" id="fail-logo"><i class="far fa-times-circle"></i></div>
+          <div class="modal-message">
+            <h2>Error</h2>
+            <p>No fue posible enviar el mensaje, inténtelo nuevamente.
+            </p>
+          </div>
+        </div>  
+      </div>
 
       <div class="footer">
         <div class="mission">

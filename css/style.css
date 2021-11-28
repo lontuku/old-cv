@@ -59,6 +59,7 @@ html {
 
 .nav-menu a{
   text-decoration: none;
+  color: black;
   --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
 }
 
@@ -126,6 +127,7 @@ html {
   background:hsla(180, 63%, 50%, 0.589);
   color: white;
   border-radius: 7px;
+  margin-top: 30px;
 }
 
 .svg-hero {
@@ -242,7 +244,6 @@ html {
   position: relative;
   width: 90%;
   min-height: 480px;
-  margin: 0 25px 30px;
 }
 
 .title-cards {
@@ -256,8 +257,11 @@ html {
 
 .allcards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
   grid-template-rows: 10rem 1fr;
+  /* margin: 0 25px 30px 25px; */
+  justify-items: center;
 }
 
 .thecard{
@@ -307,7 +311,6 @@ html {
   align-items: center;
   border-radius: 15px;
   padding-top: 40%;
-  
 }
 
 .container-text p {
@@ -343,6 +346,10 @@ html {
   justify-content: center;
   align-items: center;
   border-radius: 15px 15px
+}
+
+.theback h2{
+  display: none;
 }
 
 .theback p {
@@ -491,7 +498,7 @@ footer {
 
 .container-formulario .picture img {
   width: 100%;
-  height: auto;
+  height: 100%;
   margin-right: 20px;
 }
 
@@ -537,7 +544,12 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 20px 0 20px;
   align-items: center;
+}
+
+.text-over h2{
+  margin-bottom: 20px;
 }
 
 .input {
@@ -647,6 +659,93 @@ input[type="submit"]:hover {
   margin-right: 10px;
 }
 
+.modal-content {
+  background-color: white;
+  width: 370px;
+  padding: 10px 20px;
+  /* margin: 20% auto; */
+  position: relative;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  border-radius: 10px;
+  --shadow-color: 218deg 44% 29%;
+  --shadow-elevation-high:
+    0.3px 0.5px 0.6px hsl(var(--shadow-color) / 0.36),
+    1.4px 2.8px 3.5px -0.4px hsl(var(--shadow-color) / 0.35),
+    2.6px 5.2px 6.4px -0.8px hsl(var(--shadow-color) / 0.35),
+    4.3px 8.7px 10.7px -1.1px hsl(var(--shadow-color) / 0.34),
+    7px 14px 17.3px -1.5px hsl(var(--shadow-color) / 0.34),
+    11.1px 22.1px 27.3px -1.9px hsl(var(--shadow-color) / 0.33),
+    16.9px 33.8px 41.7px -2.3px hsl(var(--shadow-color) / 0.33),
+    25px 50px 61.6px -2.7px hsl(var(--shadow-color) / 0.32);
+  box-shadow: var(--shadow-elevation-high);
+}
+
+.modal{
+  background-color: hsl(217 44% 49%);
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  display: none;
+  transition: all .4s linear;
+}
+
+.close-btn{
+  align-self: end;
+  color: darkgrey;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.close-btn:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.check {
+  color: green;
+  font-size: 45px;
+  animation-name: checko;
+  animation-duration: 2s;
+}
+
+#fail-logo{
+  color: red;
+}
+
+.modal-message{
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  margin-top: 10px;
+}
+
+.modal-message p {
+  margin: 20px 10px 29px;
+}
+
+@keyframes checko {
+  from { clip-path: circle(0 at center) }
+  to { clip-path: circle(100% at center)}
+}
+
+@-webkit-keyframes animatetop {
+  from {top:-200px; opacity:0} 
+  to {top:0; opacity:1}
+}
+@keyframes animatetop {
+  from {top:-200px; opacity:0}
+  to {top:0; opacity:1}
+}
+
 @media screen and (max-width: 800px) {
   /* navbar mobile */
   .nav-burger {
@@ -667,6 +766,10 @@ input[type="submit"]:hover {
     align-items: center;
     clip-path: circle(0 at center);
     transition: clip-path .5s ease-in-out;
+  }
+
+  .nav-menu a{
+    color: white;
   }
 
   .nav-menu a:visited{
@@ -768,6 +871,108 @@ input[type="submit"]:hover {
   .last-section .container-text-main {
     width: 98%;
     margin-bottom: 20px;
+  }
+
+  .container-formulario {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .picture {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    margin-bottom: 30px;
+  }
+
+  .container-formulario .picture img{
+    height: 300px; /* height of container */
+    object-fit: cover;
+    object-position: 10%; /* try 20px 10px */ 
+  }
+
+  .text-over {
+    padding: 0 20px 0 20px;
+    width: 100%;
+  }
+
+  .text-over h2{
+    margin-bottom: 20px;
+  }
+
+  .allcards {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 20px;
+    align-items: center;
+  }
+
+  .theback p {
+    margin: 20% 10% 10px 10%;
+    max-height: 30%;
+    font-size: .9rem;
+  }
+
+  .theback {
+    transform: none;
+    flex-direction: column;
+  }
+
+  .theback h2{
+    display: block;
+  }
+
+  .card-container:hover > .thecard {
+    transform: none;
+  }
+  
+  .civil {
+    grid-row: 2/3;
+  }
+
+  .laboral {
+    grid-row: 3/4;
+  }
+
+  .comercial-card {
+    grid-row: 4/5;
+  }
+
+  .third {
+    justify-content: space-evenly;
+  }
+
+  .third p{
+    height: 100%;
+    margin-top: 30%;
+    margin-bottom: 5px;
+  }
+
+  .regulatorio {
+    grid-row: 5/6;
+  }
+
+  /* new cards */
+  .card-container {
+    position: relative;
+    width: 80%;
+    min-height: 300px;
+  }
+
+  .map {
+    flex-direction: column;
+  }
+
+  .bleed{
+    height: auto;
+  }
+
+  .picture {
+    margin: 0 10% 10% 15%;
+  }
+
+  .picture .text-over {
+    padding: 0 20px 0 3px;
   }
 }
 
