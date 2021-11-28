@@ -47,6 +47,12 @@ function hr_scroll() {
   });
 }
 
+//scroll to top
+$("a[href='#top']").click(function() {
+  $("html, body").animate({ scrollTop: 0 }, 50);
+  return false;
+});
+
 // handle links with @href started with '#' only
 $(document).on('click', 'a[href^="#"]', function(e) {
   // target element id
@@ -117,23 +123,3 @@ $('#theform').submit(function(event) {
     $('.send').addClass('submitBtn');
     $('.send').prop('disabled', false);
 });
-
-// $('body').on('submit', form, function formSubmitHandler(event){
-//   // Shadow the form to prevent infinite loop
-//   var form = event.target;
-
-//   event.preventDefault();
-
-//   // If <input type="submit">
-//   button.attr('value', 'Adding...');
-
-//   // If <button>Add</button>
-//   button.text('Adding...');
-
-//   button.prop('disabled', true);
-
-//   // Submit the form in a different tick
-//   setTimeout(function() {
-//       form.submit();
-//   }, 10);
-// });
