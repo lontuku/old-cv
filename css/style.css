@@ -978,6 +978,26 @@ input[type="submit"]:hover {
   .picture .text-over {
     padding: 0 20px 0 3px;
   }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contacto {
+    margin: 0 73px 10px;
+  }
+
+  .final {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .trademark {
+    margin-bottom: 8px;
+  }
 }
 
 @media screen and (max-width: 400px) {
