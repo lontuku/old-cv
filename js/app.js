@@ -91,8 +91,6 @@ $(document).on('click', function(event) {
 
 $('#theform').submit(function(event) {
   event.preventDefault();
-// Prevent the form from submitting via the browser 
-  console.log('asd');
   var form = $(this);
     $.ajax({
       type: form.attr('method'),

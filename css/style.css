@@ -448,6 +448,10 @@ html {
   align-items: space-between;
 }
 
+.data p{
+  margin-bottom: 5px;
+}
+
 .descriptor .icon {
   margin-right: 10px;
   height: 30px;
